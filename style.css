@@ -111,3 +111,46 @@ footer { text-align:center; padding:15px; background:#1E88E5; color:white; margi
   main h1 { font-size:1.6rem; }
   button { font-size:14px; padding:10px; }
 }
+
+/* HERO BANNER */
+.hero-banner {
+  position: relative;
+  background: url('assets/banner.jpeg') center/cover no-repeat;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.banner-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.banner-content p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* FLOATING SHAPES */
+.floating-shape {
+  position: absolute;
+  border: 2px solid rgba(255,255,255,0.7);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-shape.balloon { width: 40px; height: 60px; top: 20%; left: 10%; border-radius: 50% 50% 50% 50%; }
+.floating-shape.heart { width: 40px; height: 40px; top: 50%; left: 80%; clip-path: polygon(50% 0%, 0% 50%, 50% 100%, 100% 50%); }
+.floating-shape.cake { width: 30px; height: 30px; top: 70%; left: 30%; }
+.floating-shape.pencil { width: 20px; height: 50px; top: 25%; left: 60%; }
+.floating-shape.fruit { width: 25px; height: 25px; top: 60%; left: 50%; border-radius: 50%; }
+
+/* FLOATING ANIMATION */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
