@@ -17,10 +17,6 @@
   <div class="hamburger" onclick="toggleMenu()"><div></div><div></div><div></div></div>
 </nav>
 
-<header>
-  <img src="assets/banner.jpeg" alt="Bluey's Friends Club Banner">
-</header>
-
 <main>
   <h1>Join Our Club 🎉</h1>
 
@@ -53,7 +49,6 @@
 
 <script>
 function toggleMenu(){document.getElementById("navbar").classList.toggle("active");}
-
 const form=document.getElementById("registrationForm");
 form.addEventListener("submit", async function(e){
   e.preventDefault();
