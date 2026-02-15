@@ -18,7 +18,7 @@ nav {
   align-items: center;
   background-color: #42A5F5;
   padding: 10px 20px;
-  position: relative;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -41,24 +41,27 @@ nav a {
 }
 
 /* MOBILE NAV */
-@media(max-width:768px){
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   nav a {
     display: none;
+    width: 100%;
+    margin: 10px 0;
+    text-align: left;
   }
   nav.active a {
     display: block;
-    margin: 10px 0;
   }
   .hamburger {
     display: flex;
+    align-self: flex-end;
   }
 }
 
 /* HEADER / BANNER */
-header {
-  width: 100%;
-}
-
 header img {
   width: 100%;
   height: auto;
@@ -72,8 +75,9 @@ main {
 }
 
 main h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #42A5F5;
+  margin-bottom: 10px;
 }
 
 main p {
@@ -83,7 +87,8 @@ main p {
 
 /* FORM */
 form {
-  max-width: 500px;
+  width: 90%;
+  max-width: 400px;
   margin: 20px auto;
   text-align: left;
 }
@@ -95,6 +100,7 @@ form input, form textarea, form button {
   border-radius: 5px;
   border: 2px solid #42A5F5;
   font-size: 1rem;
+  box-sizing: border-box;
 }
 
 form button {
@@ -154,6 +160,7 @@ footer {
   text-align: center;
   padding: 20px;
   margin-top: 20px;
+  font-size: 0.9rem;
 }
 
 /* GALLERY */
