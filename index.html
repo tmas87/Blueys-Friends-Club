@@ -11,36 +11,24 @@
 <body>
 
 <nav id="navbar">
-  <div class="nav-left"><a href="index.html">Home</a></div>
-  <div class="nav-right">
-    <a href="registration.html">Register</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </div>
+  <a href="index.html">Home</a>
+  <a href="registration.html">Register</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
   <div class="hamburger" onclick="toggleMenu()">
-    <div></div>
-    <div></div>
-    <div></div>
+    <div></div><div></div><div></div>
   </div>
 </nav>
 
-<main>
-  <!-- HERO BANNER -->
-  <section class="hero-banner">
-    <div class="banner-content">
-      <h1>Bluey's Friends Club</h1>
-      <p>Where Little Friends Grow Big Dreams 💙</p>
-      <p>Our Mission: To create a safe, fun, and creative environment for children to learn and grow.</p>
-      <p>Our Vision: Every child discovers their potential through play, friendship, and learning.</p>
-    </div>
+<header>
+  <img src="assets/banner.jpeg" alt="Bluey's Friends Club Banner">
+</header>
 
-    <!-- Floating shapes -->
-    <div class="floating-shape balloon"></div>
-    <div class="floating-shape heart"></div>
-    <div class="floating-shape cake"></div>
-    <div class="floating-shape pencil"></div>
-    <div class="floating-shape fruit"></div>
-  </section>
+<main>
+  <h1>Bluey's Friends Club</h1>
+  <p>Where Little Friends Grow Big Dreams 💙</p>
+  <p>Our Mission: To create a safe, fun, and creative environment for children to learn and grow.</p>
+  <p>Our Vision: Every child discovers their potential through play, friendship, and learning.</p>
 </main>
 
 <footer>
@@ -48,10 +36,7 @@
 </footer>
 
 <script>
-function toggleMenu() {
-  document.getElementById("navbar").classList.toggle("active");
-}
+function toggleMenu(){document.getElementById("navbar").classList.toggle("active");}
 </script>
-
 </body>
 </html>
