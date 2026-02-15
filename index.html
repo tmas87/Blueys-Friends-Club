@@ -1,57 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Bluey's Friends Club</title>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bluey's Friends Club</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<header></header>
-
 <nav id="navbar">
-    <a href="index.html">Home</a>
+  <div class="nav-left"><a href="index.html">Home</a></div>
+  <div class="nav-right">
     <a href="registration.html">Register</a>
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
-
-    <div class="hamburger" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 </nav>
 
 <main>
-    <section class="welcome-text">
-        <h1>Bluey's Friends Club</h1>
-        <p>Where Little Friends Grow Big Dreams 💙</p>
-    </section>
-
-    <div class="card">
-        <h2>Our Mission 🌟</h2>
-        <p>To create a joyful and safe space where children can grow, learn, and build friendships.</p>
-
-        <h2>Our Vision 💭</h2>
-        <p>To inspire confident, kind, and creative young minds.</p>
-
-        <h2>Our Values 💖</h2>
-        <ul>
-            <li>✨ Kindness & Friendship</li>
-            <li>🎨 Creativity & Imagination</li>
-            <li>🌈 Inclusivity & Respect</li>
-            <li>📚 Learning Through Play</li>
-        </ul>
-    </div>
+  <section class="hero">
+    <h1>Bluey's Friends Club</h1>
+    <p>Where Little Friends Grow Big Dreams 💙</p>
+    <p>Our Mission: To create a safe, fun, and creative environment for children to learn and grow.</p>
+    <p>Our Vision: Every child discovers their potential through play, friendship, and learning.</p>
+    <p>We encourage curiosity, creativity, and kindness in all our little learners.</p>
+  </section>
 </main>
 
 <footer>
-    © 2026 Bluey's Friends Club. All Rights Reserved.
+  © 2026 Bluey's Friends Club. All Rights Reserved.
 </footer>
 
 <script>
 function toggleMenu() {
-    document.getElementById("navbar").classList.toggle("active");
+  document.getElementById("navbar").classList.toggle("active");
 }
 </script>
 
