@@ -1,90 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Register - Bluey's Friends Club</title>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Bluey's Friends Club</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
 <nav id="navbar">
-    <a href="index.html">Home</a>
+  <div class="nav-left"><a href="index.html">Home</a></div>
+  <div class="nav-right">
     <a href="registration.html">Register</a>
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
-
-    <div class="hamburger" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 </nav>
 
 <main>
-    <h1>Join Our Club 🎉</h1>
+  <h1>Join Our Club 🎉</h1>
 
-    <!-- FORM using Formsubmit.co -->
-    <form id="registrationForm" action="https://formsubmit.co/monkiemotaung63@gmail.com" method="POST">
-        <!-- Optional: Redirect after submission -->
-        <input type="hidden" name="_next" value="https://yourgithubusername.github.io/Blueys-Friends-Club/thankyou.html">
-        <!-- Optional: Disable Captcha -->
-        <input type="hidden" name="_captcha" value="false">
+  <form id="registrationForm" action="https://formsubmit.co/monkiemotaung63@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="thankyou.html">
 
-        <input type="text" name="child_name" placeholder="Child's Full Name" required>
-        <input type="number" name="age" placeholder="Age" required>
-        <input type="text" name="parent_name" placeholder="Parent/Guardian Name" required>
-        <input type="email" name="email" placeholder="Email Address" required>
-        <input type="tel" name="phone" placeholder="Phone Number" required>
-        <textarea name="notes" placeholder="Any Special Notes"></textarea>
+    <input type="text" name="child_name" placeholder="Child's Full Name" required>
+    <input type="number" name="age" placeholder="Age" required>
+    <input type="text" name="parent_name" placeholder="Parent/Guardian Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <textarea name="notes" placeholder="Any Special Notes"></textarea>
 
-        <button type="submit">Register Now 💙</button>
-    </form>
+    <button type="submit">Register Now 💙</button>
+  </form>
 
-    <div class="popup" id="popup">
-        <div class="popup-content">
-            <h2>🎉 You're In!</h2>
-            <p>Welcome to Bluey's Friends Club!</p>
-            <button onclick="closePopup()">Close</button>
-        </div>
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h2>🎉 You're In!</h2>
+      <p>Welcome to Bluey's Friends Club!</p>
+      <button onclick="closePopup()">Close</button>
     </div>
+  </div>
 </main>
 
 <footer>
-    © 2026 Bluey's Friends Club. All Rights Reserved.
+  © 2026 Bluey's Friends Club. All Rights Reserved.
 </footer>
 
 <script>
 function toggleMenu() {
-    document.getElementById("navbar").classList.toggle("active");
+  document.getElementById("navbar").classList.toggle("active");
 }
 
-// Popup on successful submission
 const form = document.getElementById("registrationForm");
-form.addEventListener("submit", async function(e) {
-    e.preventDefault();
-    const formData = new FormData(form);
-
-    const response = await fetch(form.action, {
-        method: "POST",
-        body: formData,
-        headers: {
-            'Accept': 'application/json'
-        }
-    });
-
-    if(response.ok) {
-        document.getElementById("popup").style.display = "flex";
-        form.reset();
-    } else {
-        alert("Oops! Something went wrong. Please try again.");
-    }
+form.addEventListener("submit", async function(e){
+  e.preventDefault();
+  const formData = new FormData(form);
+  const response = await fetch(form.action, { method:'POST', body: formData, headers:{ 'Accept':'application/json' }});
+  if(response.ok){
+    document.getElementById("popup").style.display = "flex";
+    form.reset();
+  } else {
+    alert("Oops! Something went wrong. Please try again.");
+  }
 });
 
-function closePopup() {
-    document.getElementById("popup").style.display = "none";
+function closePopup(){
+  document.getElementById("popup").style.display = "none";
 }
 </script>
 
 </body>
 </html>
-
